@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Magical Birthday Surprise ✨</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-midnight: #061c22;
+      --bg-deep: #0b2d36;
+      --gold-light: #fdf0c4;
+      --gold-champagne: #f5d076;
+      --gold-rich: #d4af37;
+      --teal-glow: #14b8a6;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: radial-gradient(circle at 50% 12%, #852a4a 0%, #061c22 58%, #020c0f 100%);
+      color: #fcf9f0;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    .font-display {
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    /* Champagne Gold Shimmer Text */
+    .gold-shimmer {
+      background: linear-gradient(120deg, #d4af37 0%, #fdf0c4 28%, #f5d076 52%, #ffffff 68%, #d4af37 100%);
+      background-size: 220% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmerSweep 4.5s linear infinite;
+    }
+
+    @keyframes shimmerSweep {
+      0% { background-position: 0% center; }
+      100% { background-position: 220% center; }
+    }
+
+    /* Luxury Glassmorphism */
+    .luxury-glass {
+      background: linear-gradient(145deg, rgba(255, 183, 191, 0.72) 0%, rgba(174, 59, 59, 0.86) 100%);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(245, 208, 118, 0.28);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(253, 240, 196, 0.16);
+    }
+
+    /* 3D Velvet Teal & Champagne Gold Gift Box */
+    .gift-stage {
+      perspective: 900px;
+    }
+
+    .gift-box-wrap {
+      position: relative;
+      width: 148px;
+      height: 148px;
+      margin: 0 auto;
+      transform-style: preserve-3d;
+      animation: giftFloat 3.4s ease-in-out infinite;
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .gift-box-wrap:hover {
+      transform: scale(1.07) rotateY(-8deg) rotateX(4deg);
+    }
+
+    @keyframes giftFloat {
+      0%, 100% { transform: translateY(0px) rotateZ(0deg); }
+      50% { transform: translateY(-10px) rotateZ(1.5deg); }
+    }
+
+    .gift-body {
+      position: absolute;
+      bottom: 0;
+      left: 14px;
+      width: 120px;
+      height: 98px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #104957 0%, #082831 60%, #04161b 100%);
+      border: 1.5px solid rgba(245, 208, 118, 0.5);
+      box-shadow: 0 22px 40px rgba(0, 0, 0, 0.75), inset 0 -10px 20px rgba(0, 0, 0, 0.45);
+      overflow: hidden;
+    }
+
+    .gift-body::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      width: 24px;
+      height: 100%;
+      background: linear-gradient(90deg, #b88c24 0%, #fdf0c4 48%, #d4af37 100%);
+      box-shadow: 0 0 14px rgba(245, 208, 118, 0.45);
+    }
+
+    .gift-lid {
+      position: absolute;
+      top: 30px;
+      left: 6px;
+      width: 136px;
+      height: 30px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #155c6d 0%, #0b2d36 75%);
+      border: 1.5px solid rgba(253, 240, 196, 0.65);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.55);
+      z-index: 3;
+      transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .gift-box-wrap:hover .gift-lid {
+      transform: translateY(-7px) rotateZ(-3deg);
+    }
+
+    .gift-lid::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      width: 26px;
+      height: 100%;
+      background: linear-gradient(90deg, #b88c24 0%, #fdf0c4 50%, #d4af37 100%);
+    }
+
+    .gift-bow-left,
+    .gift-bow-right {
+      position: absolute;
+      top: 6px;
+      width: 38px;
+      height: 28px;
+      border-radius: 50% 50% 12% 50%;
+      background: linear-gradient(135deg, #fdf0c4 0%, #f5d076 55%, #b88c24 100%);
+      border: 1px solid #fff7dc;
+      z-index: 2;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.45);
+    }
+
+    .gift-bow-left {
+      left: 36px;
+      transform: rotate(-24deg);
+    }
+
+    .gift-bow-right {
+      right: 36px;
+      border-radius: 50% 50% 50% 12%;
+      transform: rotate(24deg);
+    }
+
+    .gift-bow-knot {
+      position: absolute;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 18px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 35% 35%, #ffffff, #f5d076 55%, #b88c24 100%);
+      z-index: 4;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* CTA Pulse Glow */
+    .cta-glow {
+      box-shadow: 0 0 28px rgba(245, 208, 118, 0.42), 0 12px 30px rgba(0, 0, 0, 0.5);
+      animation: ctaPulse 2.4s ease-in-out infinite;
+    }
+
+    @keyframes ctaPulse {
+      0%, 100% { box-shadow: 0 0 24px rgba(245, 208, 118, 0.38), 0 12px 30px rgba(0, 0, 0, 0.5); }
+      50% { box-shadow: 0 0 42px rgba(253, 240, 196, 0.72), 0 14px 36px rgba(0, 0, 0, 0.6); }
+    }
+
+    /* Countdown Digit Pop Animation */
+    .digit-animate {
+      animation: digitPop 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    @keyframes digitPop {
+      0% { transform: scale(0.45); opacity: 0; filter: blur(6px); }
+      35% { transform: scale(1.12); opacity: 1; filter: blur(0px); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* Dual Counter-Rotating Portrait Rings */
+    .ring-spin-cw {
+      animation: spinCW 22s linear infinite;
+    }
+
+    .ring-spin-ccw {
+      animation: spinCCW 30s linear infinite;
+    }
+
+    @keyframes spinCW {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes spinCCW {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+
+    /* Candle Flame & Smoke Animations */
+    .candle-flame {
+      transform-origin: center bottom;
+      animation: flameFlicker 0.85s ease-in-out infinite alternate;
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    @keyframes flameFlicker {
+      0% { transform: scale(1) rotate(-2deg); }
+      50% { transform: scale(1.08, 0.94) rotate(2deg); }
+      100% { transform: scale(0.96, 1.07) rotate(-1deg); }
+    }
+
+    .candle-flame.blown-out {
+      opacity: 0;
+      transform: scale(0.1) translateY(8px);
+      animation: none;
+    }
+
+    .smoke-wisp {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .smoke-wisp.rising {
+      animation: smokeRise 2.2s ease-out forwards;
+    }
+
+    @keyframes smokeRise {
+      0% { opacity: 0.85; transform: translateY(0) scale(0.7); }
+      50% { opacity: 0.5; transform: translateY(-22px) translateX(6px) scale(1.15); }
+      100% { opacity: 0; transform: translateY(-48px) translateX(-5px) scale(1.55); }
+    }
+
+    /* Floating Blessing Orbs */
+    .blessing-orb {
+      animation: orbFloat 4.2s ease-in-out infinite;
+      transition: transform 0.25s ease, opacity 0.35s ease, box-shadow 0.25s ease;
+    }
+
+    .blessing-orb:nth-child(2) { animation-delay: 0.7s; }
+    .blessing-orb:nth-child(3) { animation-delay: 1.4s; }
+    .blessing-orb:nth-child(4) { animation-delay: 2.1s; }
+    .blessing-orb:nth-child(5) { animation-delay: 2.8s; }
+
+    @keyframes orbFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .blessing-orb.popped {
+      transform: scale(1.32);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Stagger Entrance */
+    .stagger-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .stagger-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="selection:bg-amber-300 selection:text-slate-950">
+
+  <!-- Ambient Floating Gold Dust & Celebration Fireworks Canvas -->
+  <canvas id="fx-canvas" class="fixed inset-0 w-full h-full pointer-events-none z-20"></canvas>
+
+ 
+
+  <!-- =========================================================
+       STEP 1: LUXURY GIFT BOX INTRO SCREEN
+  ========================================================== -->
+  <section id="step-intro" class="fixed inset-0 z-40 flex flex-col items-center justify-center px-5 text-center bg-[radial-gradient(circle_at_center,#0b2d36_0%,#061c22_68%,#020c0f_100%)] transition-opacity duration-700">
+    <!-- Decorative Double Border -->
+    <div class="fixed inset-4 sm:inset-8 border border-amber-300/20 rounded-3xl pointer-events-none"></div>
+    <div class="fixed inset-6 sm:inset-10 border border-teal-400/15 rounded-2xl pointer-events-none"></div>
+
+   
+
+    <div class="relative z-10 max-w-md w-full flex flex-col items-center">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs tracking-[0.26em] uppercase font-semibold text-amber-200 bg-amber-400/10 border border-amber-300/30 mb-7">
+        ✦ Special Birthday Edition ✦
+      </span>
+
+      <!-- Clickable 3D Velvet Teal & Gold Gift Box -->
+      <div id="gift-box-trigger" role="button" tabindex="0" aria-label="Open Gift Box" class="gift-stage cursor-pointer mb-8 focus:outline-none">
+        <div class="gift-box-wrap">
+          <div class="gift-bow-left"></div>
+          <div class="gift-bow-right"></div>
+          <div class="gift-bow-knot"></div>
+          <div class="gift-lid"></div>
+          <div class="gift-body"></div>
+        </div>
+      </div>
+
+      <h1 class="font-display italic text-4xl sm:text-5xl font-bold tracking-wide gold-shimmer mb-3 leading-tight">
+        A Special Surprise Awaits You
+      </h1>
+      <p class="text-teal-100/80 text-sm sm:text-base max-w-sm leading-relaxed mb-8">
+        Turn up your sound, then tap below to start the 5-second countdown and unwrap your birthday celebration.
+      </p>
+
+      <button
+        id="open-surprise-btn"
+        class="cta-glow cursor-pointer px-8 py-4 rounded-full font-semibold text-base sm:text-lg tracking-wide text-slate-950 bg-gradient-to-r from-[#fdf0c4] via-[#f5d076] to-[#d4af37] hover:brightness-110 active:scale-95 transition-all duration-200 flex items-center gap-3"
+      >
+      
+      </button>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       STEP 2: 5-TO-1 MECHANICAL CLOCK COUNTDOWN OVERLAY
+  ========================================================== -->
+  <section id="step-countdown" class="fixed inset-0 z-40 hidden flex-col items-center justify-center px-5 text-center bg-[radial-gradient(circle_at_center,#0b2d36_0%,#061c22_70%,#020c0f_100%)] transition-opacity duration-700">
+    <div class="relative z-10 flex flex-col items-center">
+      <p class="uppercase tracking-[0.32em] text-xs sm:text-sm text-teal-200/80 font-semibold mb-6">
+        Unwrapping The Magic
+      </p>
+
+      <!-- Circular SVG Progress Ring + Glowing Digit -->
+      <div class="relative w-52 h-52 sm:w-60 sm:h-60 flex items-center justify-center mb-7">
+        <svg class="w-full h-full -rotate-90 drop-shadow-[0_0_24px_rgba(245,208,118,0.35)]" viewBox="0 0 220 220">
+          <circle
+            cx="110"
+            cy="110"
+            r="96"
+            fill="rgba(6, 28, 34, 0.65)"
+            stroke="rgba(245, 208, 118, 0.16)"
+            stroke-width="6"
+          />
+          <circle
+            id="countdown-progress-circle"
+            cx="110"
+            cy="110"
+            r="96"
+            fill="none"
+            stroke="url(#goldRingGrad)"
+            stroke-width="7"
+            stroke-linecap="round"
+            stroke-dasharray="603.19"
+            stroke-dashoffset="603.19"
+            style="transition: stroke-dashoffset 0.9s cubic-bezier(0.22, 1, 0.36, 1);"
+          />
+          <defs>
+            <linearGradient id="goldRingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#fdf0c4" />
+              <stop offset="50%" stop-color="#f5d076" />
+              <stop offset="100%" stop-color="#d4af37" />
+            </linearGradient>
+          </defs>
+        </svg>
+
+        <div class="absolute inset-0 flex items-center justify-center">
+          <span id="countdown-digit" class="font-display text-7xl sm:text-8xl font-bold gold-shimmer drop-shadow-[0_8px_28px_rgba(245,208,118,0.55)] select-none">
+            5
+          </span>
+        </div>
+      </div>
+
+      <p id="countdown-caption" class="font-display italic text-2xl sm:text-3xl text-amber-200 tracking-wide min-h-[44px]">
+        Get ready...
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       STEP 3: BIRTHDAY CELEBRATION REVEAL
+  ========================================================== -->
+  <main id="step-celebration" class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 pt-8 pb-36 sm:pt-12 opacity-0 transition-opacity duration-1000">
+
+    <!-- Top Status & Personalize Button -->
+    
+
+    <!-- =========================================================
+         PORTRAIT SHOWCASE WITH DUAL COUNTER-ROTATING RINGS & 3D TILT
+    ========================================================== -->
+    <section class="text-center mb-12 sm:mb-16 stagger-up">
+      <div id="portrait-tilt-stage" class="relative w-60 h-60 sm:w-72 sm:h-72 mx-auto mb-7 flex items-center justify-center transition-transform duration-200 ease-out" style="transform-style: preserve-3d;">
+        <!-- Outer Counter-Clockwise Champagne Gold Ring -->
+        <div class="ring-spin-ccw absolute inset-0 rounded-full border-2 border-dashed border-amber-300/55 shadow-[0_0_35px_rgba(245,208,118,0.2)]"></div>
+
+        <!-- Inner Clockwise Glow Ring -->
+        <div class="ring-spin-cw absolute inset-3 rounded-full border border-teal-300/50 border-t-amber-200 border-b-amber-300"></div>
+
+        <!-- Portrait Circle -->
+        <div class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full p-1.5 bg-gradient-to-tr from-[#d4af37] via-[#fdf0c4] to-[#14b8a6] shadow-[0_20px_50px_rgba(0,0,0,0.75)]">
+          <div class="relative w-full h-full rounded-full overflow-hidden bg-[#061c22]">
+            <img
+              id="hero-photo"
+              src="98e33074-3463-4769-8812-7af5c8c260cf.jpg"
+              alt="Birthday Portrait"
+              class="w-full h-full object-cover object-top"
+              onerror="this.style.display='none'; document.getElementById('portrait-fallback').classList.remove('hidden');"
+            />
+
+            <!-- Graceful Floral Monogram Fallback if photo4.jpg is unavailable -->
+            <div id="portrait-fallback" class="hidden w-full h-full flex flex-col items-center justify-center p-4 bg-[radial-gradient(circle_at_center,#104957_0%,#061c22_100%)] text-center">
+              <svg class="w-16 h-16 mb-1 text-amber-200" viewBox="0 0 120 120" fill="none">
+                <circle cx="60" cy="60" r="50" stroke="#f5d076" stroke-width="1.5" stroke-dasharray="4 4" />
+                <path d="M60 22C66 36 84 42 98 48C84 54 66 60 60 74C54 60 36 54 22 48C36 42 54 36 60 22Z" fill="rgba(245,208,118,0.25)" stroke="#fdf0c4" stroke-width="1.5" />
+                <circle cx="60" cy="48" r="7" fill="#f5d076" />
+                <path d="M38 86Q60 72 82 86" stroke="#5eead4" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              <span class="font-display italic text-xl text-amber-200 leading-tight">Radiant Star</span>
+            </div>
+
+            <div class="absolute inset-0 rounded-full ring-1 ring-inset ring-amber-200/35 pointer-events-none bg-gradient-to-t from-teal-950/35 via-transparent to-amber-200/10"></div>
+          </div>
+        </div>
+
+        
+
+        <!-- Floating Corner Sparkles -->
+        <span class="absolute -top-1 right-4 text-2xl sm:text-3xl animate-bounce" style="animation-duration: 2.8s;">✨</span>
+        <span class="absolute bottom-2 -left-1 text-xl sm:text-2xl animate-pulse">💫</span>
+        <span class="absolute top-6 -left-3 text-lg sm:text-xl text-amber-300 animate-ping" style="animation-duration: 3.4s;">✦</span>
+      </div>
+
+      <p class="uppercase tracking-[0.3em] text-xs sm:text-sm text-teal-200/85 font-semibold mb-2">
+        Wishing A Truly Radiant Soul
+      </p>
+      <h1 class="font-display italic text-5xl sm:text-6xl md:text-7xl font-bold gold-shimmer leading-tight py-1 drop-shadow-[0_6px_24px_rgba(212,175,55,0.3)]">
+        Happy Birthday Dulasha<span id="hero-name-suffix">!</span>
+      </h1>
+      <p class="mt-3 text-base sm:text-lg text-amber-100/85 max-w-xl mx-auto font-light leading-relaxed">
+        May your day sparkle as brightly as your smile and your year unfold with endless grace, laughter, and magic.
+      </p>
+    </section>
+
+    <!-- =========================================================
+         HEARTFELT BIRTHDAY WISH CARD
+    ========================================================== -->
+    <section class="luxury-glass rounded-3xl p-6 sm:p-10 mb-10 sm:mb-12 relative overflow-hidden stagger-up">
+      <div class="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-amber-300/10 blur-2xl pointer-events-none"></div>
+      <div class="absolute -bottom-16 -left-16 w-48 h-48 rounded-full bg-teal-400/10 blur-2xl pointer-events-none"></div>
+
+      <div class="text-center max-w-2xl mx-auto relative z-10">
+        <span class="text-amber-300 text-xl tracking-widest">✦ ✦ ✦</span>
+        <h2 id="card-recipient-heading" class="font-display italic text-3xl sm:text-4xl font-bold text-amber-100 mt-2 mb-4">
+          Dear Birthday Dulasha,
+        </h2>
+        <p id="card-custom-message" class="text-teal-50/90 text-base sm:text-lg leading-relaxed font-light">
+          On this wonderful day, may every dream you hold close take flight and every moment bring warmth to your heart. You bring so much beauty, kindness, and light into the world—today is all about celebrating the extraordinary person you are.
+        </p>
+        <div class="mt-7 pt-5 border-t border-amber-300/20">
+          <p id="card-sender-sign" class="font-display italic text-2xl sm:text-3xl text-amber-300">
+            With Warmest Birthday Wishes ✨
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         INTERACTIVE 3-TIER BIRTHDAY CAKE & CANDLES
+    ========================================================== -->
+    <section class="luxury-glass rounded-3xl p-6 sm:p-10 mb-10 sm:mb-12 text-center stagger-up">
+      <span class="inline-block px-3.5 py-1 rounded-full text-xs uppercase tracking-[0.24em] text-amber-200 bg-amber-400/10 border border-amber-300/25 mb-3">
+        Interactive Wish Ceremony
+      </span>
+      <h2 class="font-display italic text-3xl sm:text-4xl font-bold gold-shimmer mb-2">
+        Close Your Eyes &amp; Make a Wish
+      </h2>
+      <p class="text-xs sm:text-sm text-teal-100/75 mb-6">
+        Tap the birthday cake or the button below to blow out the candles!
+      </p>
+
+     <!-- Luxury 3-Tier Velvet Blush Pink & Rose Gold 24th Birthday SVG Cake -->
+<div id="cake-interactive-area" role="button" tabindex="0" aria-label="24th Birthday Cake with Candles" class="cursor-pointer max-w-xs mx-auto mb-6 select-none group transition-transform duration-300 hover:scale-[1.03] focus:outline-none">
+  <svg viewBox="0 0 300 250" class="w-full h-auto drop-shadow-[0_18px_32px_rgba(157,23,77,0.35)]">
+    <defs>
+      <!-- Velvet Blush Pink Gradient -->
+      <linearGradient id="cakePinkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#9d174d" />
+        <stop offset="35%" stop-color="#f472b6" />
+        <stop offset="70%" stop-color="#db2777" />
+        <stop offset="100%" stop-color="#831843" />
+      </linearGradient>
+
+      <!-- Rose Gold & Champagne Trim Gradient -->
+      <linearGradient id="roseGoldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#b76e79" />
+        <stop offset="50%" stop-color="#ffe4e6" />
+        <stop offset="100%" stop-color="#e5989b" />
+      </linearGradient>
+
+      <!-- Candle Flame Glow -->
+      <radialGradient id="flameGlowGrad" cx="50%" cy="60%" r="55%">
+        <stop offset="0%" stop-color="#ffffff" />
+        <stop offset="45%" stop-color="#fde047" />
+        <stop offset="85%" stop-color="#f97316" />
+        <stop offset="100%" stop-color="rgba(249,115,22,0)" />
+      </radialGradient>
+    </defs>
+
+    <!-- Rose Gold Pedestal Stand -->
+    <ellipse cx="150" cy="232" rx="88" ry="10" fill="url(#roseGoldGrad)" />
+    <rect x="136" y="206" width="28" height="24" rx="4" fill="url(#roseGoldGrad)" />
+    <ellipse cx="150" cy="206" rx="118" ry="12" fill="url(#roseGoldGrad)" />
+
+    <!-- Bottom Tier -->
+    <rect x="52" y="158" width="196" height="46" rx="12" fill="url(#cakePinkGrad)" stroke="#ffe4e6" stroke-width="1.5" />
+    <path d="M52 172 Q76 184 100 172 T148 172 T196 172 T248 172" fill="none" stroke="url(#roseGoldGrad)" stroke-width="3" />
+
+    <!-- Middle Tier -->
+    <rect x="76" y="114" width="148" height="44" rx="11" fill="url(#cakePinkGrad)" stroke="#ffe4e6" stroke-width="1.5" />
+    <path d="M76 128 Q96 138 116 128 T156 128 T196 128 T224 128" fill="none" stroke="url(#roseGoldGrad)" stroke-width="2.5" />
+
+    <!-- Top Tier -->
+    <rect x="102" y="74" width="96" height="40" rx="10" fill="url(#cakePinkGrad)" stroke="#fff1f2" stroke-width="1.5" />
+    <!-- Pearl Accents -->
+    <circle cx="122" cy="94" r="3.2" fill="#fff1f2" />
+    <circle cx="150" cy="94" r="3.8" fill="#fff1f2" />
+    <circle cx="178" cy="94" r="3.2" fill="#fff1f2" />
+
+    <!-- "24" Number Candles -->
+    <g id="candles-group">
+      <!-- Number 2 Candle -->
+      <rect x="131" y="66" width="4" height="8" rx="1" fill="#ffe4e6" />
+      <text
+        x="133"
+        y="68"
+        text-anchor="middle"
+        font-family="Georgia, serif"
+        font-weight="bold"
+        font-size="34"
+        fill="#fff1f2"
+        stroke="#b76e79"
+        stroke-width="1.5"
+      >2</text>
+      <!-- Wick & Flame for 2 -->
+      <line x1="133" y1="39" x2="133" y2="43" stroke="#831843" stroke-width="1.5" />
+      <g class="candle-flame" style="transform-origin: 133px 39px;">
+        <ellipse cx="133" cy="29" rx="10" ry="14" fill="rgba(253,224,71,0.28)" />
+        <path d="M133 17 C139 26 139 35 133 39 C127 35 127 26 133 17 Z" fill="url(#flameGlowGrad)" />
+      </g>
+      <circle class="smoke-wisp" cx="133" cy="33" r="5" fill="rgba(255,228,230,0.7)" />
+
+      <!-- Number 4 Candle -->
+      <rect x="165" y="66" width="4" height="8" rx="1" fill="#ffe4e6" />
+      <text
+        x="167"
+        y="68"
+        text-anchor="middle"
+        font-family="Georgia, serif"
+        font-weight="bold"
+        font-size="34"
+        fill="#fff1f2"
+        stroke="#b76e79"
+        stroke-width="1.5"
+      >4</text>
+      <!-- Wick & Flame for 4 -->
+      <line x1="167" y1="39" x2="167" y2="43" stroke="#831843" stroke-width="1.5" />
+      <g class="candle-flame" style="transform-origin: 167px 39px; animation-delay: 0.3s;">
+        <ellipse cx="167" cy="29" rx="10" ry="14" fill="rgba(253,224,71,0.28)" />
+        <path d="M167 17 C173 26 173 35 167 39 C161 35 161 26 167 17 Z" fill="url(#flameGlowGrad)" />
+      </g>
+      <circle class="smoke-wisp" cx="167" cy="33" r="5" fill="rgba(255,228,230,0.7)" />
+    </g>
+  </svg>
+</div>
+
+<button
+  id="blow-candles-btn"
+  class="cursor-pointer px-7 py-3.5 rounded-full font-semibold text-sm sm:text-base text-rose-950 bg-gradient-to-r from-[#fff1f2] via-[#fbcfe8] to-[#f472b6] hover:brightness-110 active:scale-95 transition shadow-xl"
+>
+  Make a Wish &amp; Blow Candles
+</button>
+
+<!-- Wish Granted Banner -->
+<div id="wish-granted-banner" class="hidden mt-6 pt-5 border-t border-pink-300/30">
+  <p class="font-display italic text-2xl sm:text-3xl font-bold text-pink-200 mb-1">
+    ✨ Happy 24th! Wish Granted! ✨
+  </p>
+  <p class="text-xs sm:text-sm text-rose-100/90">
+    Your birthday wish has been sent to the stars—may chapter 24 be your best one yet!
+  </p>
+</div>
+
+    <!-- =========================================================
+         5 POPPABLE BLESSING ORBS
+    ========================================================== -->
+    <section class="text-center stagger-up">
+      <h3 class="font-display italic text-2xl sm:text-3xl font-bold text-amber-200 mb-2">
+        Tap Each Golden Blessing Orb
+      </h3>
+      <p class="text-xs sm:text-sm text-teal-100/75 mb-6">
+        Pop each floating orb to release sparkles and a birthday blessing!
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 max-w-2xl mx-auto">
+        <button data-blessing="Endless Joy ✨" data-freq="523.25" class="blessing-orb cursor-pointer px-5 py-3 rounded-full luxury-glass border border-amber-300/45 text-amber-100 text-xs sm:text-sm font-medium hover:scale-105 hover:border-amber-200 shadow-lg flex items-center gap-2">
+          <span>✨</span><span>Endless Joy</span>
+        </button>
+        <button data-blessing="Pure Love 💖" data-freq="587.33" class="blessing-orb cursor-pointer px-5 py-3 rounded-full luxury-glass border border-teal-300/45 text-teal-100 text-xs sm:text-sm font-medium hover:scale-105 hover:border-amber-200 shadow-lg flex items-center gap-2">
+          <span>💖</span><span>Pure Love</span>
+        </button>
+        <button data-blessing="Big Dreams 🌟" data-freq="659.25" class="blessing-orb cursor-pointer px-5 py-3 rounded-full luxury-glass border border-amber-300/45 text-amber-100 text-xs sm:text-sm font-medium hover:scale-105 hover:border-amber-200 shadow-lg flex items-center gap-2">
+          <span>🌟</span><span>Big Dreams</span>
+        </button>
+        <button data-blessing="Radiant Health 🌿" data-freq="783.99" class="blessing-orb cursor-pointer px-5 py-3 rounded-full luxury-glass border border-teal-300/45 text-teal-100 text-xs sm:text-sm font-medium hover:scale-105 hover:border-amber-200 shadow-lg flex items-center gap-2">
+          <span>🌿</span><span>Radiant Health</span>
+        </button>
+        <button data-blessing="Magical Year 👑" data-freq="880.00" class="blessing-orb cursor-pointer px-5 py-3 rounded-full luxury-glass border border-amber-300/45 text-amber-100 text-xs sm:text-sm font-medium hover:scale-105 hover:border-amber-200 shadow-lg flex items-center gap-2">
+          <span>👑</span><span>Magical Year</span>
+        </button>
+      </div>
+
+      <div id="orb-feedback" class="mt-5 min-h-[28px] text-sm sm:text-base font-medium text-amber-200 transition-opacity duration-300 opacity-0"></div>
+    </section>
+  </main>
+
+  
+  <!-- =========================================================
+       FLOATING BOTTOM MUSIC & CELEBRATION CONTROL BAR
+  ========================================================== -->
+  <nav id="bottom-bar" class="fixed bottom-4 left-1/2 -translate-x-1/2 z-30 opacity-0 pointer-events-none transition-all duration-700 w-[95%] max-w-xl">
+   
+      
+    </div>
+  </nav>
+
+  <!-- YouTube IFrame Player API -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+
+  <script>
+    /* ==========================================================================
+       1. WEB AUDIO ENGINE:
+          - Synchronous unlock on click
+          - Crisp mechanical clock tick-tock (1200 Hz tick / 940 Hz tock)
+          - Expressive G-Major Acoustic Guitar synthesizer (for post-countdown fallback/toggle)
+          - Gentle harp sparkle chime for blessing orbs
+    ========================================================================== */
+    class CelebrationAudioEngine {
+      constructor() {
+        this.ctx = null;
+        this.masterGain = null;
+        this.guitarLoopTimer = null;
+        this.isGuitarPlaying = false;
+        this.activeNodes = [];
+
+        // Expressive G-Major Acoustic Guitar "Happy Birthday" Melody
+        this.guitarMelody = [
+          { f: 392.00, d: 0.30, p: 0.35 }, // G4
+          { f: 392.00, d: 0.25, p: 0.30 }, // G4
+          { f: 440.00, d: 0.75, p: 0.85 }, // A4
+          { f: 392.00, d: 0.70, p: 0.80 }, // G4
+          { f: 523.25, d: 0.75, p: 0.85 }, // C5
+          { f: 493.88, d: 1.30, p: 1.50 }, // B4
+
+          { f: 392.00, d: 0.30, p: 0.35 }, // G4
+          { f: 392.00, d: 0.25, p: 0.30 }, // G4
+          { f: 440.00, d: 0.75, p: 0.85 }, // A4
+          { f: 392.00, d: 0.70, p: 0.80 }, // G4
+          { f: 587.33, d: 0.75, p: 0.85 }, // D5
+          { f: 523.25, d: 1.30, p: 1.50 }, // C5
+
+          { f: 392.00, d: 0.30, p: 0.35 }, // G4
+          { f: 392.00, d: 0.25, p: 0.30 }, // G4
+          { f: 783.99, d: 0.90, p: 1.00 }, // G5
+          { f: 659.25, d: 0.75, p: 0.85 }, // E5
+          { f: 523.25, d: 0.70, p: 0.80 }, // C5
+          { f: 493.88, d: 0.75, p: 0.85 }, // B4
+          { f: 440.00, d: 1.25, p: 1.45 }, // A4
+
+          { f: 698.46, d: 0.30, p: 0.35 }, // F5
+          { f: 698.46, d: 0.25, p: 0.30 }, // F5
+          { f: 659.25, d: 0.75, p: 0.85 }, // E5
+          { f: 523.25, d: 0.70, p: 0.80 }, // C5
+          { f: 587.33, d: 0.85, p: 0.95 }, // D5
+          { f: 523.25, d: 1.80, p: 2.40 }  // C5
+        ];
+      }
+
+      unlock() {
+        try {
+          if (!this.ctx) {
+            const AudioCtx = window.AudioContext || window.webkitAudioContext;
+            this.ctx = new AudioCtx();
+            this.masterGain = this.ctx.createGain();
+            this.masterGain.gain.setValueAtTime(0.85, this.ctx.currentTime);
+            this.masterGain.connect(this.ctx.destination);
+          }
+          if (this.ctx.state === 'suspended') {
+            this.ctx.resume();
+          }
+          const silentBuffer = this.ctx.createBuffer(1, 1, 22050);
+          const src = this.ctx.createBufferSource();
+          src.buffer = silentBuffer;
+          src.connect(this.ctx.destination);
+          src.start(0);
+        } catch (err) {
+          console.warn('AudioContext unlock warning:', err);
+        }
+      }
+
+      /**
+       * Crisp mechanical clock tick-tock sound (ONLY sound played during 5-to-1 countdown)
+       * Alternates between 1200 Hz ("tick") and 940 Hz ("tock") wooden escapement transient + noise burst
+       */
+      playClockTickTock(isTock = false) {
+        if (!this.ctx) this.unlock();
+        if (!this.ctx) return;
+        if (this.ctx.state === 'suspended') {
+          this.ctx.resume().catch(() => {});
+        }
+
+        const now = this.ctx.currentTime;
+        const primaryFreq = isTock ? 940 : 1200;
+        const harmonicFreq = isTock ? 1880 : 2400;
+
+        // 1. Sharp metallic escapement filtered noise burst
+        const clickLen = Math.floor(this.ctx.sampleRate * 0.028);
+        const noiseBuf = this.ctx.createBuffer(1, clickLen, this.ctx.sampleRate);
+        const ch = noiseBuf.getChannelData(0);
+        for (let i = 0; i < clickLen; i++) {
+          ch[i] = (Math.random() * 2 - 1) * Math.exp(-i / (clickLen * 0.18));
+        }
+
+        const noiseNode = this.ctx.createBufferSource();
+        noiseNode.buffer = noiseBuf;
+
+        const bpFilter = this.ctx.createBiquadFilter();
+        bpFilter.type = 'bandpass';
+        bpFilter.frequency.setValueAtTime(isTock ? 2200 : 2800, now);
+        bpFilter.Q.setValueAtTime(2.6, now);
+
+        const clickGain = this.ctx.createGain();
+        clickGain.gain.setValueAtTime(0.65, now);
+        clickGain.gain.exponentialRampToValueAtTime(0.001, now + 0.028);
+
+        noiseNode.connect(bpFilter);
+        bpFilter.connect(clickGain);
+        clickGain.connect(this.masterGain);
+        noiseNode.start(now);
+        noiseNode.stop(now + 0.03);
+
+        // 2. Dual-oscillator wooden escapement transient ("tick" vs "tock")
+        const osc1 = this.ctx.createOscillator();
+        const osc2 = this.ctx.createOscillator();
+        const bodyGain = this.ctx.createGain();
+
+        osc1.type = 'triangle';
+        osc1.frequency.setValueAtTime(primaryFreq, now);
+        osc1.frequency.exponentialRampToValueAtTime(primaryFreq * 0.48, now + 0.055);
+
+        osc2.type = 'sine';
+        osc2.frequency.setValueAtTime(harmonicFreq, now);
+        osc2.frequency.exponentialRampToValueAtTime(harmonicFreq * 0.42, now + 0.042);
+
+        bodyGain.gain.setValueAtTime(0.0001, now);
+        bodyGain.gain.linearRampToValueAtTime(0.65, now + 0.002);
+        bodyGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.062);
+
+        osc1.connect(bodyGain);
+        osc2.connect(bodyGain);
+        bodyGain.connect(this.masterGain);
+
+        osc1.start(now);
+        osc2.start(now);
+        osc1.stop(now + 0.068);
+        osc2.stop(now + 0.068);
+      }
+
+      // Plucked Acoustic Guitar String Synthesis (warm fundamental + octave/fifth harmonics + lowpass pluck decay)
+      pluckGuitarNote(freq, startTime, duration) {
+        if (!this.ctx) return;
+        const filter = this.ctx.createBiquadFilter();
+        filter.type = 'lowpass';
+        filter.frequency.setValueAtTime(freq * 5.2, startTime);
+        filter.frequency.exponentialRampToValueAtTime(freq * 1.35, startTime + duration + 0.35);
+        filter.Q.setValueAtTime(1.8, startTime);
+
+        const noteGain = this.ctx.createGain();
+        noteGain.gain.setValueAtTime(0.0001, startTime);
+        noteGain.gain.linearRampToValueAtTime(0.28, startTime + 0.014);
+        noteGain.gain.exponentialRampToValueAtTime(0.0008, startTime + duration + 0.45);
+
+        filter.connect(noteGain);
+        noteGain.connect(this.masterGain);
+
+        const harmonics = [
+          { mult: 1, type: 'triangle', amp: 0.65 },
+          { mult: 2, type: 'sine', amp: 0.25 },
+          { mult: 3, type: 'sine', amp: 0.10 }
+        ];
+
+        harmonics.forEach((h) => {
+          const osc = this.ctx.createOscillator();
+          const hGain = this.ctx.createGain();
+          osc.type = h.type;
+          osc.frequency.setValueAtTime(freq * h.mult, startTime);
+          hGain.gain.setValueAtTime(h.amp, startTime);
+
+          osc.connect(hGain);
+          hGain.connect(filter);
+
+          osc.start(startTime);
+          osc.stop(startTime + duration + 0.5);
+          this.activeNodes.push(osc);
+        });
+      }
+
+      startGuitarMelody() {
+        if (!this.ctx) this.unlock();
+        if (this.ctx && this.ctx.state === 'suspended') {
+          this.ctx.resume().catch(() => {});
+        }
+        this.stopGuitarMelody();
+        this.isGuitarPlaying = true;
+
+        const schedulePass = () => {
+          if (!this.isGuitarPlaying || !this.ctx) return;
+          let cursor = this.ctx.currentTime + 0.08;
+          let totalSec = 0;
+
+          this.guitarMelody.forEach((n) => {
+            this.pluckGuitarNote(n.f, cursor, n.d);
+            cursor += n.p;
+            totalSec += n.p;
+          });
+
+          this.guitarLoopTimer = setTimeout(() => {
+            if (this.isGuitarPlaying) schedulePass();
+          }, totalSec * 1000);
+        };
+
+        schedulePass();
+      }
+
+      stopGuitarMelody() {
+        this.isGuitarPlaying = false;
+        clearTimeout(this.guitarLoopTimer);
+        this.activeNodes.forEach((osc) => {
+          try { osc.stop(); } catch (_) {}
+        });
+        this.activeNodes = [];
+      }
+
+      // Gentle Harp Sparkle Chime for Blessing Orbs
+      playHarpChime(freq = 659.25) {
+        if (!this.ctx) this.unlock();
+        if (!this.ctx) return;
+        if (this.ctx.state === 'suspended') {
+          this.ctx.resume().catch(() => {});
+        }
+        const now = this.ctx.currentTime;
+        [freq, freq * 1.5].forEach((f, idx) => {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(f, now + idx * 0.055);
+          gain.gain.setValueAtTime(0.0001, now + idx * 0.055);
+          gain.gain.linearRampToValueAtTime(0.24, now + idx * 0.055 + 0.015);
+          gain.gain.exponentialRampToValueAtTime(0.0001, now + idx * 0.055 + 0.65);
+          osc.connect(gain);
+          gain.connect(this.masterGain);
+          osc.start(now + idx * 0.055);
+          osc.stop(now + idx * 0.055 + 0.7);
+        });
+      }
+    }
+
+    const audioEngine = new CelebrationAudioEngine();
+
+    /* ==========================================================================
+       2. YOUTUBE IFRAME API INTEGRATION (videoId: '2C_D64jZq7w') + 1.8s WATCHDOG
+    ========================================================================== */
+    const YT_VIDEO_ID = '2C_D64jZq7w';
+    let ytPlayer = null;
+    let ytReady = false;
+    let activeAudioSource = 'youtube'; // 'youtube' | 'guitar'
+    let isMusicPlaying = false;
+    let ytWatchdogTimer = null;
+    let countdownFinished = false;
+
+    window.onYouTubeIframeAPIReady = function () {
+      try {
+        ytPlayer = new YT.Player('yt-player-host', {
+          height: '200',
+          width: '200',
+          videoId: YT_VIDEO_ID,
+          playerVars: {
+            autoplay: 0,
+            controls: 0,
+            disablekb: 1,
+            fs: 0,
+            loop: 1,
+            playlist: YT_VIDEO_ID,
+            modestbranding: 1,
+            playsinline: 1,
+            rel: 0
+          },
+          events: {
+            onReady: () => {
+              ytReady = true;
+            },
+            onStateChange: (event) => {
+              if (!countdownFinished) return;
+              if (event.data === YT.PlayerState.PLAYING) {
+                clearTimeout(ytWatchdogTimer);
+                if (activeAudioSource === 'youtube') {
+                  isMusicPlaying = true;
+                  document.getElementById('yt-mini-card').classList.add('hidden');
+                  updateBottomDock();
+                }
+              } else if (event.data === YT.PlayerState.PAUSED) {
+                if (activeAudioSource === 'youtube') {
+                  isMusicPlaying = false;
+                  updateBottomDock();
+                }
+              } else if (event.data === YT.PlayerState.ENDED) {
+                if (activeAudioSource === 'youtube') {
+                  ytPlayer.seekTo(0);
+                  ytPlayer.playVideo();
+                }
+              }
+            },
+            onError: () => {
+              if (countdownFinished && activeAudioSource === 'youtube') {
+                fallbackToGuitarWithMiniCard();
+              }
+            }
+          }
+        });
+      } catch (e) {
+        console.warn('YouTube player init error:', e);
+      }
+    };
+
+    function primeYouTubeSilently() {
+      if (ytReady && ytPlayer && typeof ytPlayer.mute === 'function') {
+        try {
+          ytPlayer.mute();
+          ytPlayer.playVideo();
+        } catch (_) {}
+      }
+    }
+
+    function startPostCountdownSong() {
+      clearTimeout(ytWatchdogTimer);
+      activeAudioSource = 'youtube';
+
+      let attempted = false;
+      if (ytReady && ytPlayer && typeof ytPlayer.unMute === 'function') {
+        try {
+          ytPlayer.unMute();
+          ytPlayer.setVolume(100);
+          ytPlayer.seekTo(0);
+          ytPlayer.playVideo();
+          attempted = true;
+          isMusicPlaying = true;
+          updateBottomDock();
+        } catch (_) {
+          attempted = false;
+        }
+      }
+
+      // 1.8s Smart Watchdog: guarantee audio via Acoustic Guitar + YouTube Mini-Card if blocked
+      ytWatchdogTimer = setTimeout(() => {
+        let actuallyPlaying = false;
+        if (attempted && ytReady && ytPlayer && typeof ytPlayer.getPlayerState === 'function') {
+          try {
+            actuallyPlaying = (ytPlayer.getPlayerState() === YT.PlayerState.PLAYING);
+          } catch (_) {
+            actuallyPlaying = false;
+          }
+        }
+        if (!actuallyPlaying) {
+          fallbackToGuitarWithMiniCard();
+        }
+      }, 1800);
+    }
+
+    function fallbackToGuitarWithMiniCard() {
+      activeAudioSource = 'guitar';
+      isMusicPlaying = true;
+      audioEngine.startGuitarMelody();
+      document.getElementById('yt-mini-card').classList.remove('hidden');
+      updateBottomDock();
+    }
+
+    function updateBottomDock() {
+      const playIcon = document.getElementById('play-pause-icon');
+      const playText = document.getElementById('play-pause-text');
+      const srcIcon = document.getElementById('source-icon');
+      const srcLabel = document.getElementById('source-label');
+
+      playIcon.textContent = isMusicPlaying ? '⏸️' : '▶️';
+      playText.textContent = isMusicPlaying ? 'Pause' : 'Play';
+
+      if (activeAudioSource === 'youtube') {
+        srcIcon.textContent = '🎵';
+        srcLabel.textContent = 'YouTube Song';
+      } else {
+        srcIcon.textContent = '🎸';
+        srcLabel.textContent = 'Acoustic Guitar';
+      }
+    }
+
+    /* ==========================================================================
+       3. FULL-SCREEN HTML5 CANVAS: AMBIENT GOLD DUST, CONFETTI & FIREWORKS
+    ========================================================================== */
+    const canvas = document.getElementById('fx-canvas');
+    const ctx2d = canvas.getContext('2d');
+    let cw = (canvas.width = window.innerWidth);
+    let ch = (canvas.height = window.innerHeight);
+
+    window.addEventListener('resize', () => {
+      cw = canvas.width = window.innerWidth;
+      ch = canvas.height = window.innerHeight;
+    });
+
+    const palette = ['#fdf0c4', '#f5d076', '#d4af37', '#14b8a6', '#5eead4', '#ffffff'];
+    const ambientDust = Array.from({ length: 48 }, () => ({
+      x: Math.random() * cw,
+      y: Math.random() * ch,
+      r: Math.random() * 2 + 0.7,
+      vx: (Math.random() - 0.5) * 0.35,
+      vy: -Math.random() * 0.45 - 0.15,
+      alpha: Math.random() * 0.6 + 0.2
+    }));
+
+    const confettiPieces = [];
+    const fireworkSparks = [];
+
+    function spawnConfetti(count = 45) {
+      for (let i = 0; i < count; i++) {
+        confettiPieces.push({
+          x: Math.random() * cw,
+          y: -15 - Math.random() * 60,
+          w: Math.random() * 8 + 5,
+          h: Math.random() * 5 + 3,
+          color: palette[Math.floor(Math.random() * palette.length)],
+          vx: (Math.random() - 0.5) * 3.5,
+          vy: Math.random() * 3.2 + 2.1,
+          rot: Math.random() * Math.PI * 2,
+          vRot: (Math.random() - 0.5) * 0.16,
+          life: 1
+        });
+      }
+    }
+
+    function spawnFirework(x, y, count = 65) {
+      for (let i = 0; i < count; i++) {
+        const angle = (Math.PI * 2 * i) / count + (Math.random() - 0.5) * 0.2;
+        const speed = Math.random() * 5.2 + 1.8;
+        fireworkSparks.push({
+          x,
+          y,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed,
+          color: palette[Math.floor(Math.random() * palette.length)],
+          size: Math.random() * 2.6 + 1.2,
+          alpha: 1,
+          decay: Math.random() * 0.016 + 0.012
+        });
+      }
+    }
+
+    function launchFireworkShow() {
+      spawnConfetti(85);
+      const bursts = [
+        [cw * 0.24, ch * 0.26],
+        [cw * 0.76, ch * 0.24],
+        [cw * 0.50, ch * 0.19],
+        [cw * 0.32, ch * 0.42],
+        [cw * 0.68, ch * 0.40]
+      ];
+      bursts.forEach(([bx, by], i) => {
+        setTimeout(() => spawnFirework(bx, by, 72), i * 320);
+      });
+    }
+
+    function animateCanvas() {
+      ctx2d.clearRect(0, 0, cw, ch);
+
+      // Ambient floating gold dust
+      ambientDust.forEach((d) => {
+        d.x += d.vx;
+        d.y += d.vy;
+        if (d.y < -10) { d.y = ch + 10; d.x = Math.random() * cw; }
+        if (d.x < -10) d.x = cw + 10;
+        if (d.x > cw + 10) d.x = -10;
+
+        ctx2d.beginPath();
+        ctx2d.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+        ctx2d.fillStyle = `rgba(253, 240, 196, ${d.alpha})`;
+        ctx2d.fill();
+      });
+
+      // Confetti pieces
+      for (let i = confettiPieces.length - 1; i >= 0; i--) {
+        const c = confettiPieces[i];
+        c.x += c.vx + Math.sin(c.y * 0.03) * 0.7;
+        c.y += c.vy;
+        c.rot += c.vRot;
+        if (c.y > ch + 30) {
+          confettiPieces.splice(i, 1);
+          continue;
+        }
+        ctx2d.save();
+        ctx2d.translate(c.x, c.y);
+        ctx2d.rotate(c.rot);
+        ctx2d.fillStyle = c.color;
+        ctx2d.fillRect(-c.w / 2, -c.h / 2, c.w, c.h);
+        ctx2d.restore();
+      }
+
+      // Firework sparks
+      for (let i = fireworkSparks.length - 1; i >= 0; i--) {
+        const s = fireworkSparks[i];
+        s.x += s.vx;
+        s.y += s.vy;
+        s.vy += 0.055; // gravity
+        s.vx *= 0.985;
+        s.vy *= 0.985;
+        s.alpha -= s.decay;
+
+        if (s.alpha <= 0) {
+          fireworkSparks.splice(i, 1);
+          continue;
+        }
+
+        ctx2d.beginPath();
+        ctx2d.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+        ctx2d.fillStyle = s.color;
+        ctx2d.globalAlpha = Math.max(0, s.alpha);
+        ctx2d.fill();
+        ctx2d.globalAlpha = 1;
+      }
+
+      requestAnimationFrame(animateCanvas);
+    }
+    animateCanvas();
+
+    /* ==========================================================================
+       4. 5-TO-1 MECHANICAL CLOCK COUNTDOWN & CELEBRATION FLOW
+    ========================================================================== */
+    const stepIntro = document.getElementById('step-intro');
+    const stepCountdown = document.getElementById('step-countdown');
+    const stepCelebration = document.getElementById('step-celebration');
+    const bottomBar = document.getElementById('bottom-bar');
+
+    const countdownDigitEl = document.getElementById('countdown-digit');
+    const countdownCaptionEl = document.getElementById('countdown-caption');
+    const progressCircleEl = document.getElementById('countdown-progress-circle');
+    const CIRCLE_CIRCUMFERENCE = 603.19;
+
+    const countdownSteps = [
+      { num: 5, caption: 'Get ready...' },
+      { num: 4, caption: 'Make a wish...' },
+      { num: 3, caption: 'Lighting the candles...' },
+      { num: 2, caption: 'Almost time...' },
+      { num: 1, caption: 'Happy Birthday!' }
+    ];
+
+    let sequenceStarted = false;
+    let countdownInterval = null;
+
+    function startSurpriseFlow() {
+      if (sequenceStarted) return;
+      sequenceStarted = true;
+      countdownFinished = false;
+
+      // 1. Synchronously unlock Web Audio inside click gesture
+      audioEngine.unlock();
+
+      // 2. Prime YouTube IFrame Player silently inside click gesture
+      primeYouTubeSilently();
+
+      // 3. Fade out Intro & show 5-to-1 Countdown Overlay
+      stepIntro.style.opacity = '0';
+      setTimeout(() => stepIntro.classList.add('hidden'), 650);
+
+      stepCountdown.classList.remove('hidden');
+      stepCountdown.classList.add('flex');
+      stepCountdown.style.opacity = '1';
+
+      let idx = 0;
+
+      const renderTick = () => {
+        const current = countdownSteps[idx];
+
+        countdownDigitEl.classList.remove('digit-animate');
+        void countdownDigitEl.offsetWidth;
+        countdownDigitEl.textContent = current.num;
+        countdownDigitEl.classList.add('digit-animate');
+
+        countdownCaptionEl.textContent = current.caption;
+
+        const progressRatio = (idx + 1) / countdownSteps.length;
+        progressCircleEl.style.strokeDashoffset = CIRCLE_CIRCUMFERENCE * (1 - progressRatio);
+
+        // ONLY play mechanical clock tick-tock during countdown (1200 Hz tick / 940 Hz tock)
+        audioEngine.playClockTickTock(idx % 2 === 1);
+
+        // Sparkle burst on every tick
+        spawnConfetti(28);
+        spawnFirework(cw * (0.25 + Math.random() * 0.5), ch * (0.2 + Math.random() * 0.25), 34);
+      };
+
+      renderTick();
+
+      countdownInterval = setInterval(() => {
+        idx++;
+        if (idx < countdownSteps.length) {
+          renderTick();
+        } else {
+          clearInterval(countdownInterval);
+          revealCelebration();
+        }
+      }, 1000);
+    }
+
+    function revealCelebration() {
+      countdownFinished = true;
+
+      stepCountdown.style.opacity = '0';
+      setTimeout(() => {
+        stepCountdown.classList.add('hidden');
+        stepCountdown.classList.remove('flex');
+      }, 650);
+
+      stepCelebration.classList.remove('opacity-0');
+      bottomBar.classList.remove('opacity-0', 'pointer-events-none');
+
+      document.querySelectorAll('.stagger-up').forEach((el, i) => {
+        setTimeout(() => el.classList.add('visible'), 160 + i * 160);
+      });
+
+      // Burst golden & teal fireworks + confetti
+      launchFireworkShow();
+
+      // Automatically unmute & play YouTube Short (with 1.8s guitar fallback watchdog)
+      startPostCountdownSong();
+    }
+
+    document.getElementById('open-surprise-btn').addEventListener('click', startSurpriseFlow);
+    document.getElementById('gift-box-trigger').addEventListener('click', startSurpriseFlow);
+    document.getElementById('gift-box-trigger').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        startSurpriseFlow();
+      }
+    });
+
+    /* ==========================================================================
+       5. PORTRAIT 3D MOUSE-TILT PARALLAX
+    ========================================================================== */
+    const tiltStage = document.getElementById('portrait-tilt-stage');
+    tiltStage.addEventListener('mousemove', (e) => {
+      const rect = tiltStage.getBoundingClientRect();
+      const nx = (e.clientX - rect.left) / rect.width - 0.5;
+      const ny = (e.clientY - rect.top) / rect.height - 0.5;
+      tiltStage.style.transform = `perspective(700px) rotateY(${nx * 16}deg) rotateX(${-ny * 16}deg)`;
+    });
+    tiltStage.addEventListener('mouseleave', () => {
+      tiltStage.style.transform = 'perspective(700px) rotateY(0deg) rotateX(0deg)';
+    });
+
+    /* ==========================================================================
+       6. INTERACTIVE 3-TIER CAKE & CANDLE BLOWING CEREMONY
+    ========================================================================== */
+    let candlesBlown = false;
+    const blowBtn = document.getElementById('blow-candles-btn');
+    const cakeArea = document.getElementById('cake-interactive-area');
+    const wishBanner = document.getElementById('wish-granted-banner');
+
+    function toggleCandles() {
+      audioEngine.unlock();
+      const flames = document.querySelectorAll('.candle-flame');
+      const smokes = document.querySelectorAll('.smoke-wisp');
+
+      if (!candlesBlown) {
+        candlesBlown = true;
+        flames.forEach((f) => f.classList.add('blown-out'));
+        smokes.forEach((s) => {
+          s.classList.remove('rising');
+          void s.offsetWidth;
+          s.classList.add('rising');
+        });
+        blowBtn.textContent = ' Relight Candles';
+        wishBanner.classList.remove('hidden');
+        audioEngine.playHarpChime(783.99);
+        launchFireworkShow();
+      } else {
+        candlesBlown = false;
+        flames.forEach((f) => f.classList.remove('blown-out'));
+        smokes.forEach((s) => s.classList.remove('rising'));
+        blowBtn.textContent = 'Make a Wish & Blow Candles';
+        wishBanner.classList.add('hidden');
+        audioEngine.playHarpChime(523.25);
+      }
+    }
+
+    blowBtn.addEventListener('click', toggleCandles);
+    cakeArea.addEventListener('click', toggleCandles);
+    cakeArea.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleCandles();
+      }
+    });
+
+    /* ==========================================================================
+       7. 5 POPPABLE BLESSING ORBS
+    ========================================================================== */
+    const orbFeedback = document.getElementById('orb-feedback');
+    let poppedCount = 0;
+
+    document.querySelectorAll('.blessing-orb').forEach((orb) => {
+      orb.addEventListener('click', (e) => {
+        if (orb.classList.contains('popped')) return;
+        audioEngine.unlock();
+
+        const blessing = orb.getAttribute('data-blessing');
+        const freq = parseFloat(orb.getAttribute('data-freq')) || 659.25;
+        const rect = orb.getBoundingClientRect();
+
+        orb.classList.add('popped');
+        poppedCount++;
+
+        audioEngine.playHarpChime(freq);
+        spawnFirework(rect.left + rect.width / 2, rect.top + rect.height / 2, 36);
+
+        orbFeedback.textContent = poppedCount === 5
+          ? `All 5 Birthday Blessings Unlocked: ${blessing} 🎉`
+          : `Blessing Unlocked: ${blessing}`;
+        orbFeedback.style.opacity = '1';
+      });
+    });
+
+    /* ==========================================================================
+       8. PERSONALIZE MODAL (LIVE NAME & CUSTOM MESSAGE UPDATE)
+    ========================================================================== */
+    const modal = document.getElementById('personalize-modal');
+    const openModalBtns = [
+      document.getElementById('intro-personalize-btn'),
+      document.getElementById('open-personalize-btn')
+    ];
+
+    openModalBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      });
+    });
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    document.getElementById('close-modal-btn').addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    document.getElementById('personalize-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const rawName = document.getElementById('input-recipient-name').value.trim();
+      const customMsg = document.getElementById('input-wish-message').value.trim();
+      const senderSign = document.getElementById('input-sender-name').value.trim();
+
+      const heroSuffix = document.getElementById('hero-name-suffix');
+      const cardHeading = document.getElementById('card-recipient-heading');
+      const cardMessage = document.getElementById('card-custom-message');
+      const cardSign = document.getElementById('card-sender-sign');
+
+      if (rawName) {
+        heroSuffix.textContent = `, ${rawName}!`;
+        cardHeading.textContent = `Dear ${rawName},`;
+      } else {
+        heroSuffix.textContent = '!';
+        cardHeading.textContent = 'Dear Birthday Star,';
+      }
+
+      if (customMsg) cardMessage.textContent = customMsg;
+      if (senderSign) cardSign.textContent = senderSign;
+
+      closeModal();
+      spawnConfetti(35);
+    });
+
+    /* ==========================================================================
+       9. FLOATING BOTTOM MUSIC & CELEBRATION CONTROLS
+    ========================================================================== */
+    document.getElementById('btn-play-pause').addEventListener('click', () => {
+      audioEngine.unlock();
+      if (activeAudioSource === 'youtube') {
+        if (ytReady && ytPlayer) {
+          if (isMusicPlaying) {
+            ytPlayer.pauseVideo();
+            isMusicPlaying = false;
+          } else {
+            ytPlayer.unMute();
+            ytPlayer.setVolume(100);
+            ytPlayer.playVideo();
+            isMusicPlaying = true;
+          }
+        }
+      } else {
+        if (isMusicPlaying) {
+          audioEngine.stopGuitarMelody();
+          isMusicPlaying = false;
+        } else {
+          audioEngine.startGuitarMelody();
+          isMusicPlaying = true;
+        }
+      }
+      updateBottomDock();
+    });
+
+    document.getElementById('btn-fireworks').addEventListener('click', () => {
+      launchFireworkShow();
+    });
+
+    document.getElementById('btn-switch-source').addEventListener('click', () => {
+      audioEngine.unlock();
+      clearTimeout(ytWatchdogTimer);
+
+      if (activeAudioSource === 'youtube') {
+        // Switch to Acoustic Guitar
+        if (ytReady && ytPlayer && typeof ytPlayer.pauseVideo === 'function') {
+          try { ytPlayer.pauseVideo(); } catch (_) {}
+        }
+        activeAudioSource = 'guitar';
+        isMusicPlaying = true;
+        audioEngine.startGuitarMelody();
+      } else {
+        // Switch back to YouTube Song
+        audioEngine.stopGuitarMelody();
+        activeAudioSource = 'youtube';
+        isMusicPlaying = true;
+        if (ytReady && ytPlayer && typeof ytPlayer.playVideo === 'function') {
+          try {
+            ytPlayer.unMute();
+            ytPlayer.setVolume(100);
+            ytPlayer.playVideo();
+          } catch (_) {
+            fallbackToGuitarWithMiniCard();
+            return;
+          }
+        } else {
+          fallbackToGuitarWithMiniCard();
+          return;
+        }
+      }
+      updateBottomDock();
+    });
+  </script>
+</body>
+</html>
